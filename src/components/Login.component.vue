@@ -43,9 +43,6 @@ async function submitLogin() {
       </n-form-item>
 
       <n-form-item>
-        <n-text>
-          Pas de compte ? <a href="/register">S'inscrire</a>
-        </n-text>
       </n-form-item>
     </n-form>
   </div>
