@@ -9,7 +9,7 @@
       pane-style="padding-left: 4px; padding-right: 4px; box-sizing: border-box;"
     >
       <n-tab-pane name="connexion" tab="Connexion">
-        <ConnexionComponent @toggleSignup="activeTab = 'signup'" />
+        <LoginComponent @toggleSignup="activeTab = 'signup'" />
       </n-tab-pane>
       <n-tab-pane name="inscription" tab="Inscription">
         <InscriptionComponent @toggleSignin="activeTab = 'signin'" />
@@ -20,7 +20,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import ConnexionComponent from '../components/Connexion.component.vue';
+import LoginComponent from '../components/Login.component.vue';
 import InscriptionComponent from '../components/Inscription.component.vue';
 
 const activeTab = ref('signin');

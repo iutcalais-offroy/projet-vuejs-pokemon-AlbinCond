@@ -1,17 +1,10 @@
 import axios from 'axios';
 
-const API_URL = 'https://pokemon-api-seyrinian-production.up.railway.app';
-
-export const registerUser = (email: string, password: string) => {
-  return axios.post(`${API_URL}/users`, {
-    "email" : email,
-    "password" : password
-  });
-};
-
-export const loginUser = (email: string, password: string) => {
-  return axios.post(`${API_URL}/users/login`, {
-    "email" : email,
-    "password" : password
-  });
-};
+export const loginUser = async (email: String, password: String) => {
+  const response = await axios.post('https://pokemon-api-seyrinian-production.up.railway.app/users/login/', {
+    email: email,
+    password: password
+  })
+  console.log(response.data)
+  return response.data
+}

@@ -21,7 +21,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { registerUser } from '../apis/Login.api';
+
 import { useMessage } from 'naive-ui';
 
 const username = ref('');

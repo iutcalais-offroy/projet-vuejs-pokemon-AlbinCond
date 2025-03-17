@@ -8,17 +8,14 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    'Connexion.component': typeof import('./src/components/Connexion.component.vue')['default']
-    'Connexion.components': typeof import('./src/components/Connexion.components.vue')['default']
     'HeaderMenu.component': typeof import('./src/components/HeaderMenu.component.vue')['default']
     'Inscription.component': typeof import('./src/components/Inscription.component.vue')['default']
-    'LoginForm.component': typeof import('./src/components/LoginForm.component.vue')['default']
+    'Login.component': typeof import('./src/components/Login.component.vue')['default']
+    LoginComponent: typeof import('./src/components/Login.component.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
-    NConfigProvider: typeof import('naive-ui')['NConfigProvider']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']
-    NFormItemRow: typeof import('naive-ui')['NFormItemRow']
     NInput: typeof import('naive-ui')['NInput']
     NLayout: typeof import('naive-ui')['NLayout']
     NLayoutContent: typeof import('naive-ui')['NLayoutContent']
@@ -30,7 +27,5 @@ declare module 'vue' {
     NTabs: typeof import('naive-ui')['NTabs']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    'SignupForm.component': typeof import('./src/components/SignupForm.component.vue')['default']
-    'Tabs.component': typeof import('./src/components/Tabs.component.vue')['default']
   }
 }
