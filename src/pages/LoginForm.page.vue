@@ -11,6 +11,8 @@ const activeTab = ref("login");
 const changeTab = (tab) => {
   activeTab.value = tab; // Attribuer simplement la valeur de l'onglet souhaité
 };
+
+provide('changeTab', changeTab)
 </script>
 
 <template>

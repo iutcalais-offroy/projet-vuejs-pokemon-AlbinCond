@@ -5,13 +5,13 @@ import { NForm, NFormItem, NInput, NButton, NText } from 'naive-ui';
 
 const registerStore = useRegisterStore();
 const { registerData, errors } = storeToRefs(registerStore);
-
+const changeTab = inject('changeTab') as (tab: string) => void;
 async function submitRegister() {
   try {
     await registerStore.registerState();
     if (errors.value.length === 0) {
-      console.log("Rediriger vers la page de connexion après inscription réussie.");
-      // Redirection possible, par exemple : this.$router.push('/login');
+      console.log("Inscription réussie, redirection vers la page de connexion.");
+      changeTab('login'); // Change l'onglet vers "login"
     }
   } catch (error) {
     console.error("Échec de l'inscription :", error);
