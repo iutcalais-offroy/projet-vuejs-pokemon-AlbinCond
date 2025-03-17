@@ -11,7 +11,6 @@ declare module 'vue' {
     'HeaderMenu.component': typeof import('./src/components/HeaderMenu.component.vue')['default']
     'Inscription.component': typeof import('./src/components/Inscription.component.vue')['default']
     'Login.component': typeof import('./src/components/Login.component.vue')['default']
-    LoginComponent: typeof import('./src/components/Login.component.vue')['default']
     NButton: typeof import('naive-ui')['NButton']
     NCard: typeof import('naive-ui')['NCard']
     NForm: typeof import('naive-ui')['NForm']
@@ -25,6 +24,7 @@ declare module 'vue' {
     NSpace: typeof import('naive-ui')['NSpace']
     NTabPane: typeof import('naive-ui')['NTabPane']
     NTabs: typeof import('naive-ui')['NTabs']
+    'Register.component': typeof import('./src/components/Register.component.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
-import { loginUser } from '../apis/Login.api';
+import { loginUser } from '../apis/Login.api.js';
 
 export const useLoginStore = defineStore('login', () => {
     const loginData = ref({
@@ -11,6 +11,7 @@ export const useLoginStore = defineStore('login', () => {
     const loginState = async () => {
         try {
             await loginUser(loginData.value.email, loginData.value.password);
+            console.log("Connexion réussie :", loginData.value);
         } catch (error) {
             console.error("Erreur lors de la connexion :", error);
         }

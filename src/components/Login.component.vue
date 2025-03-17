@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { storeToRefs } from "pinia";
-import { useLoginStore } from '../stores/Login.store.js';
+import { useLoginStore } from '../stores/Login.store';
 import { NForm, NFormItem, NInput, NButton, NText } from 'naive-ui'
 
 const loginStore = useLoginStore();
@@ -9,7 +9,6 @@ const { loginData } = storeToRefs(loginStore);
 async function submitLogin() {
   try {
     await loginStore.loginState();
-    console.log("Connexion réussie :", loginData.value);
   } catch (error) {
     console.error("Échec de la connexion :", error);
   }
@@ -31,6 +30,7 @@ async function submitLogin() {
       <!-- Mot de passe -->
       <n-form-item label="Mot de passe">
         <n-input
+            type="password"
             v-model:value="loginData.password"
             placeholder="Entrez votre mot de passe"
         />
